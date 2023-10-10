@@ -1,0 +1,421 @@
+﻿<!DOCTYPE html>
+<html lang="en">
+	<head>
+<!-- Global site tag (gtag.js) - Google Analytics -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=UA-118032674-1"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+
+  gtag('config', 'UA-118032674-1');
+</script>
+        {% load staticfiles %}
+		<meta name="viewport" content="width=device-width, initial-scale=1">
+		<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+		<meta http-equiv="x-dns-prefetch-control" content="on">
+		<meta http-equiv="X-UA-Compatible" content="chrome=1">
+		<meta name="description" content="AI Clerk 以成為提供人工智慧軟體應用服務以及協助建立人工智慧應用服務之工具為終極目標，尤其著重在自然語言處理（Natural 
+			Language Processing）、文本探勘（Text Mining）及機器學習（Machine Learning）相關技術與服務應用，希冀協助組織、企業迎向人工智慧時代的到來，解決生活中各式致命痛點。">
+		<meta name="keywords" content="AI Clerk, 昊慧, AI Clerk, 智慧書僮, 人工智慧, 語意理解, 雲端運算, 深度學習, 大數據分析, 自然語言處理, 文本探勘, 機器學習, 
+			問答系統, 智慧虛擬助理, 大數據決策分析平台, 自動語意標記平台, AI Clerk Platform, 電商零售, 醫療, 行銷廣告 ">
+		<meta property="og:title" content="AI Clerk:「AI Clerk」- 會賣東西的機器人" />
+		<meta property="og:type" content='website' />
+		<meta property="og:url" content="https://ai-clerk.com" />
+		<meta property="og:description" content="AI Clerk 以成為提供人工智慧軟體應用服務以及協助建立人工智慧應用服務之工具為終極目標，尤其著重在自然語言處理
+			（Natural Language Processing）、文本探勘（Text Mining）及機器學習（Machine Learning）相關技術與服務應用，希冀協助組織、企業迎向人工智慧時代的到來，解決生活中各式致命痛點。
+			"/>
+		<meta property="og:image" content="https://ai-clerk.com/getimg_name/?img=AI_Clerk.png&location=home"/>
+		<meta property="og:site_name" content="AI Clerk:「AI Clerk」- 會賣東西的機器人" />
+		<meta property="fb:app_id" content="1643032452454268" />
+		<title>AI Clerk:「AI Clerk」- 會賣東西的機器人</title>
+		<!-- Bootstrap -->
+		<link href="{% static 'css/bootstrap.min.css' %}" rel="stylesheet">
+		<!--圓形ICON與FONTER, 需WEBFONTS內的字型檔-->
+		<link rel="stylesheet" href="{% static 'css/fontawesome-all.css' %}">
+		<link href="{% static 'css/animate.min.css' %}" rel="stylesheet">
+		<link href="{% static 'css/prettyPhoto.css' %}" rel="stylesheet">
+		<link href="{% static 'css/main.css' %}" rel="stylesheet">
+		<link href="{% static 'css/responsive.css' %}" rel="stylesheet">
+		<!--[if lt IE 9]>
+		<script src="js/html5shiv.js"></script>
+		<script src="js/respond.min.js"></script>
+		<![endif]-->       
+	</head>
+	<body class="homepage">
+		<header id="header">
+			<nav class="navbar navbar-fixed-top" role="banner">
+				<div class="container">
+					<div class="navbar-header">
+						<a style="height: auto;max-width: 50%;" class="navbar-brand" href="http://www.itri.org.tw"><img src="/getimg_name/?img=itri.png&location=home" class="img-responsive" alt="工業技術研究院" ></a>
+						<a style="height: auto;max-width: 50%;" class="navbar-brand" href="/index"><img src="/getimg_name/?img=AI_Clerk.png&location=home" class="img-responsive" alt="AI Clerk 昊慧"> </a>
+					</div>
+					<div class="text-right" >
+						<!--a class="btn btn-outline-primary" href="/eng/index"-->
+						<a class="btn btn-outline-primary">
+						English
+						</a>|
+						<!--a class="btn btn-outline-primary" href="/cn/index"-->
+						<a class="btn btn-outline-primary">
+						简体中文
+						</a>
+						<!-- <button type="button" class="btn btn-outline-primary" data-toggle="modal" style="border: 2px solid #008CBA;"> -->
+						<!--button type="button" class="btn btn-outline-primary" data-toggle="modal" data-target="#exampleModal" style="border: 2px solid #008CBA;"-->
+						<!-- <a href=mailto:aiclerkmail@gmail.com?subject="請教AI_Clerk，感謝">聯絡我們</a> -->
+						<!-- </button> -->
+					</div>
+					<!-- Modal -->
+					<div class="modal fade" id="exampleModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+						<div class="modal-dialog" role="document">
+							<div class="modal-content">
+								<div class="modal-header">
+									<h5 class="modal-title" id="exampleModalLabel">聯絡我們</h5>
+									<button type="button" class="close" data-dismiss="modal" aria-label="Close">
+									<span aria-hidden="true">&times;</span>
+									</button>
+								</div>
+								<!--聯絡表單-->
+								<div class="modal-body">
+									<!--form method="POST" action="http://formspree.io/aiclerkmail@gmail.com"-->
+									<form method="POST">
+										<div class="form-group">
+											<label for="exampleDropdownFormEmail2">姓名</label>
+											<input name="name" type="text" class="form-control" id="name" placeholder="">
+											<label  for="exampleDropdownFormEmail2">信箱</label>
+											<input type="email" class="form-control" id="email" placeholder="email@example.com">
+											<label for="exampleDropdownFormEmail2">連絡電話</label>
+											<input type="text" class="form-control" id="phone" placeholder="" >
+											<label for="exampleDropdownFormEmail2">需要甚麼服務</label>
+											<select class="form-control" id="option">
+												<option>---</option>
+												<option>尋求合作</option>
+												<option>索取資料</option>
+												<option>請教職缺</option>
+												<option>採訪與演講邀約</option>
+												<option>其他</option>
+											</select>
+											<label for="message-text" class="col-form-label">留言</label>
+											<textarea class="form-control" id="message-text"  rows="3"></textarea>
+											<input type="hidden" name="_subject" value="新郵件">
+										</div>
+										<div class="modal-footer">
+											<input type="submit" class="btn btn-primary" value="送出" onclick="sent_mail()">
+										</div>
+									</form>
+								</div>
+								<div class="modal-footer">
+								</div>
+							</div>
+						</div>
+					</div>
+				<div class="collapse navbar-collapse navbar-right">
+						<ul class="nav nav-pills">
+							<li class="nav-item dropdown">
+								<a class="nav-link dropdown-toggle" data-toggle="dropdown" href="#" role="button" aria-haspopup="true" 
+									aria-expanded="false">關於</a>
+								<ul class="dropdown-menu">
+									<li><a class="dropdown-item" href="/about">背景簡介</a></li>
+									<li><a class="dropdown-item" href="/team">團隊成員</a></li>
+									<li><a class="dropdown-item" href="/hornor">榮譽</a></li>
+									<li><a class="dropdown-item" href="/responsobility">社會公益</a></li>
+								</ul>
+							</li>
+							<li class="nav-item dropdown">
+								<a class="nav-link dropdown-toggle" data-toggle="dropdown" href="#" role="button" aria-haspopup="true" 
+									aria-expanded="false">最新消息</a>
+								<ul class="dropdown-menu">
+									<li><a class="dropdown-item" href="/report?0">最新快訊</a></li>
+									<li><a class="dropdown-item" href="/news?0">新知分享</a></li>
+									<li><a class="dropdown-item" href="/join-us">徵才訊息</a></li>
+								</ul>
+							</li>
+							<li class="nav-item">
+								<a class="nav-link" href="/technology">核心技術</a>
+							</li>
+							<li class="nav-item">
+								<a class="nav-link disabled" href="/product">產品服務</a>
+							</li>
+							<li class="nav-item">
+								<a class="nav-link disabled" href="/solution">解決方案</a>
+							</li>
+							<li class="nav-item">
+								<a class="nav-link disabled" href="/partner">合作夥伴</a>
+							</li>
+							<li class="nav-item">
+								<a class="nav-link disabled" href="/join-us">加入我們</a>
+							</li>
+						</ul>
+					</div>
+				</div>
+				<!--/.container-->
+			</nav>
+			<!--/nav-->
+		</header>
+		<!--/header-->
+		<br><br>
+		<section id="recent-works">
+			<div class="container">
+				<div class="center wow fadeInDown">
+					<h2><strong>加入我們</strong></h2>
+					<p class="lead">在這個 人工智慧 蔚為風潮的年代，我們正在透過 <br>
+							人工智慧（Artificial Intelligence）、大數據分析（Big Data）、雲端運算（Cloud Computing）等，<br>
+							做出讓世界變得更不一樣的商品，如果你具有責任感、充滿學習熱情、樂於團隊合作，<br>
+							歡迎加入我們新創的行列！請將履歷資料寄至 AiClerkMail@gmail.com
+					</p>
+				</div>
+				<div>
+					<div class="card" >
+						<div class="panel-heading" id="headingTwo" style="background-color: #DDDDDD">
+							<button class="btn btn-link collapsed" data-toggle="collapse" data-target="#collapseTwo" aria-expanded="false" aria-controls="collapseTwo" style="text-decoration-line: none;color:#21989e;font-size: 18px;">
+							<i class="fa fa-suitcase"> 間時前端介面與美工工程師 </i>　
+							</button>
+						</div>
+						<div id="collapseTwo" class="collapse" aria-labelledby="headingTwo" data-parent="#accordion">
+							<div class="panel-body">
+								<p>工作內容：</p>
+								<ul>
+									<li>協助進行設計網頁或App的UI/UX、視覺設計、美工、切版等</li>
+									<li>負責紙本與電子檔相關文宣製作或美化等，美工、企宣類相關公務 </li>
+									<li>公司產品服務之宣傳影片的編輯。 </li>
+								</ul>
+								<p>條件要求：</p>
+								<ul type="">
+									<li>工作技能：多媒體影像處理</li>
+									<li>擅長工具：需熟悉影像與影片編輯軟體，熟悉前端技術HTML5,CSS3,jQuery等能力者優先</li>
+									<li>科系要求：無</li>
+									<li>主動積極、抗壓性強，良好溝通能力與團隊合作態度</li>
+									<li>請附上相關作品集</li>
+								</ul>
+								<p>職缺說明：</p>
+								<ul type="">
+									<li>工作性質：兼職，一週至少1個工作日</li>
+									
+									<li>需求人數：1 人</li>
+								</ul>
+							</div>
+						</div>
+					</div>
+					<div class="card">
+						<div class="panel-heading" id="headingThree" style="background-color:#f2f2f2">
+							<button class="btn btn-link collapsed" data-toggle="collapse" data-target="#collapseThree" aria-expanded="false" aria-controls="collapseThree" style="text-decoration-line: none;color:#21989e;font-size: 18px;">
+							<i class="fa fa-suitcase"> 雲端運算架構之系統工程師</i>　
+							</button>
+						</div>
+						<div id="collapseThree" class="collapse" aria-labelledby="headingThree" data-parent="#accordion">
+							<div class="panel-body">
+								<p>工作內容：</p>
+								<ul>
+									<li>雲端運算與儲存之系統架構建置</li>
+									<li>與各式人工智慧模組或演算法之整合 </li>
+									<li>其他交辦事項</li>
+								</ul>
+								<p>條件要求：</p>
+								<ul>
+									<li>科系要求：資訊相關</li>
+									<li>擅長工具：程式撰寫</li>
+									<li>工作技能：雲端運算與儲存之系統架構建置</li>
+									<li>其他條件：具備相關實務經驗者優先考量</li>
+								</ul>
+								<p>職缺說明：</p>
+								<ul type="">
+									<li>工作性質：全職</li>
+									
+									<li>需求人數：1 人</li>
+								</ul>
+							</div>
+						</div>
+					</div>
+				</div>
+				<br><br>
+				<div class="row">
+					<div class="col-xs-12 col-sm-4 col-md-3">
+						<div class="recent-work-wrap">
+							<img class="img-responsive" src="/getimg_name/?img=index_img1.jpg&location=index" alt="">
+							<div class="overlay">
+								<div class="recent-work-inner">
+									<h3><a href="/ai_clerk">AI Clerk</a> </h3>
+									<p>不受時空限制24小時提供個人化諮詢服務</p>
+									<a class="preview" href="/ai_clerk"><i class="fa fa-eye"></i> Link</a>					
+								</div>
+							</div>
+						</div>
+					</div>
+					<div class="col-xs-12 col-sm-4 col-md-3">
+						<div class="recent-work-wrap">
+							<img class="img-responsive" src="/getimg_name/?img=index_img2.jpg&location=index" alt="">
+							<div class="overlay">
+								<div class="recent-work-inner">
+									<h3><a href="/ai_clerk">AI Clerk</a></h3>
+									<p>麻瓜式搜尋，不須爬文，不怕被噓，一問就通</p>
+									<a class="preview" href="/ai_clerk"><i class="fa fa-eye"></i> Link</a>
+								</div>
+							</div>
+						</div>
+					</div>
+					<div class="col-xs-12 col-sm-4 col-md-3">
+						<div class="recent-work-wrap">
+							<img class="img-responsive" src="/getimg_name/?img=index_img3.jpg&location=index" alt="">
+							<div class="overlay">
+								<div class="recent-work-inner">
+									<h3><a href="">智慧書僮</a></h3>
+									<p>知你所想，推你所慾，摘你所要</p>
+									<a class="preview" href=""><i class="fa fa-eye"></i> Link</a>
+								</div>
+							</div>
+						</div>
+					</div>
+					<div class="col-xs-12 col-sm-4 col-md-3">
+						<div class="recent-work-wrap">
+							<img class="img-responsive" src="/getimg_name/?img=index_img4.jpg&location=index" alt="">
+							<div class="overlay">
+								<div class="recent-work-inner">
+									<h3><a href="/join-us">加入我們</a></h3>
+									<p>歡迎具責任感、充滿學習熱情、樂於團隊合作的您，加入我們的行列</p>
+									<a class="preview" href="/join-us"><i class="fa fa-eye"></i> Link</a>
+								</div>
+							</div>
+						</div>
+					</div>
+					<div class="col-xs-12 col-sm-4 col-md-3">
+						<div class="recent-work-wrap">
+							<img class="img-responsive" src="/getimg_name/?img=index_img5.jpg&location=index" alt="">
+							<div class="overlay">
+								<div class="recent-work-inner">
+									<h3><a href="/technology/#semantic">語意理解</a></h3>
+									<p>減少語意理解模組技術研發過程中99%以上人工蒐集和標記語料的時間</p>
+									<a class="preview" href="/technology/#semantic"><i class="fa fa-eye"></i> Link</a>
+								</div>
+							</div>
+						</div>
+					</div>
+					<div class="col-xs-12 col-sm-4 col-md-3">
+						<div class="recent-work-wrap">
+							<img class="img-responsive" src="/getimg_name/?img=index_img6.jpg&location=index" alt="">
+							<div class="overlay">
+								<div class="recent-work-inner">
+									<h3><a href="/solution">各人工智慧解決方案 </a></h3>
+									<p>協助組織、企業迎向人工智慧時代的到來，解決生活中各式致命痛點</p>
+									<a class="preview" href="/solution"><i class="fa fa-eye"></i> Link</a>
+								</div>
+							</div>
+						</div>
+					</div>
+					<div class="col-xs-12 col-sm-4 col-md-3">
+						<div class="recent-work-wrap">
+							<img class="img-responsive" src="/getimg_name/?img=index_img7.jpg&location=index" alt="">
+							<div class="overlay">
+								<div class="recent-work-inner">
+									<h3><a href="/partner">產學研合作</a></h3>
+									<p>鏈結與強化產學研之各資源與能量，成功應用於各領域層級</p>
+									<a class="preview" href="/partner"><i class="fa fa-eye"></i> Link</a>
+								</div>
+							</div>
+						</div>
+					</div>
+                    <div class="col-xs-12 col-sm-4 col-md-3">
+						<div class="recent-work-wrap">
+							<img class="img-responsive" src="/getimg_name/?img=index_img8.jpg&location=index" alt="">
+							<div class="overlay">
+								<div class="recent-work-inner">
+									<h3><a href="/product">讓生活更智慧</a></h3>
+									<p>提供人工智慧軟體應用服務以及協助工具為終極目標</p>
+									<a class="preview" href="/product"><i class="fa fa-eye"></i> Link</a>
+								</div>
+							</div>
+						</div>
+					</div>
+				</div>
+				<!--/.row-->
+			</div>
+			<!--/.container-->
+		</section>
+		<!--/#contact-page-->
+		<div class="map">
+			<iframe src="https://www.google.com/maps/embed?pb=!1m14!1m8!1m3!1d640.2606595481274!2d120.9882434111799!3d24.800204797415848!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x0%3A0x29ce682b14be49be!2z6LKh5ZyY5rOV5Lq65bel5qWt5oqA6KGT56CU56m26Zmi5YWJ5b6p6Zmi5Y2AKOaWsOeruSk!5e0!3m2!1szh-TW!2stw!4v1528190419959" width="600" height="450" frameborder="0" style="border:0" 
+				allowfullscreen></iframe>
+		</div>
+		<!--/#recent-works-->	
+		<section id="bottom">
+			<div class="container wow fadeInDown" data-wow-duration="1000ms" data-wow-delay="600ms">
+				<div class="row">
+					<div class="col-md-3 col-sm-6">
+						<div class="widget">
+							<h3>關於</h3>
+							<ul>
+								<li><a href="/about">背景簡介</a></li>
+								<li><a href="/team">團隊成員</a></li>
+								<li><a href="/hornor">榮譽</a></li>
+								<li><a href="/responsobility">社會公益</a></li>
+							</ul>
+						</div>
+					</div>
+					<!--/.col-md-3-->
+					<div class="col-md-3 col-sm-6">
+						<div class="widget">
+							<h3 >最新消息</h3>
+							<ul>
+								<li><a href="/report?0">最新快訊</a></li>
+								<li><a href="/news?0">新知分享</a></li>
+								<li><a href="/join-us">徵才訊息</a></li>
+							</ul>
+						</div>
+					</div>
+					<!--/.col-md-3-->
+					<div class="col-md-3 col-sm-6">
+						<div class="widget">
+							<h3>
+								<ul>
+									<li><a href="/technology">核心技術</a></li>
+									<li><a href="/product">產品服務</a></li>
+									<li><a href="/solution">解決方案</a></li>
+								</ul>
+							</h3>
+						</div>
+					</div>
+					<!--/.col-md-3-->
+					<div class="col-md-3 col-sm-6">
+						<div class="widget">
+							<h3>
+								<ul>
+									<li><a href="/partner">合作夥伴</a></li>
+									<li><a href="/join-us">加入我們</a></li>
+								</ul>
+							</h3>
+						</div>
+					</div>
+					<!--/.col-md-3-->
+				</div>
+			</div>
+		</section>
+		<!--/#bottom-->
+		<div class="top-bar">
+			<div class="container">
+				<div class="row">
+					<div class="col-lg-12">
+						<div class="social">
+							<ul class="social-share">
+								<li><a href="https://www.facebook.com/ai.clerk/" target="_blank""><i class="fab fa-facebook-f"></i></a></li>
+								<li><a href="/ai_clerk"><i class="fab fa-line"></i></a></li>
+								<!--li><a href="https://www.youtube.com/channel/UCSZP1-X1e0KQC2jWOWrlfSQ" target="_blank"><i class="fab fa-youtube"></i></a></li-->
+							</ul>
+						</div>
+					</div>
+					<div style="color:#fff;text-align: center;">
+						<h6 style="color:#fff;font-size: 15px;">Tel : (03)573-2002</h6>
+						<h6 style="color:#fff;font-size: 15px;">Email : aiclerkmail@gmail.com</h6>
+						<h6 style="color:#fff;font-size: 15px;">&copy;2018 ITRI. All rights reserved.</h6>
+					</div>
+				</div>
+			</div>
+			<!--/.container-->
+		</div>
+		<!--/.top-bar-->
+		<!-- jQuery (necessary for Bootstrap's JavaScript plugins) -->
+		<script src="{% static 'js/main.js' %}"></script>
+		<script src="{% static 'js/jquery.js' %}"></script>
+		<script src="{% static 'js/bootstrap.min.js' %}"></script>
+		<script src="{% static 'js/jquery.prettyPhoto.js' %}"></script>
+		<script src="{% static 'js/jquery.isotope.min.js' %}"></script>   
+		<script src="{% static 'js/wow.min.js' %}"></script>
+	</body>
+</html>

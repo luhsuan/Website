@@ -1,0 +1,505 @@
+﻿<!DOCTYPE html>
+<html lang="en">
+	<head>
+<!-- Global site tag (gtag.js) - Google Analytics -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=UA-118032674-1"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+
+  gtag('config', 'UA-118032674-1');
+</script>
+        {% load staticfiles %}
+		<meta name="viewport" content="width=device-width, initial-scale=1">
+		<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+		<meta http-equiv="x-dns-prefetch-control" content="on">
+		<meta http-equiv="X-UA-Compatible" content="chrome=1">
+		<meta name="description" content="AI Clerk 以成為提供人工智慧軟體應用服務以及協助建立人工智慧應用服務之工具為終極目標，尤其著重在自然語言處理（Natural 
+			Language Processing）、文本探勘（Text Mining）及機器學習（Machine Learning）相關技術與服務應用，希冀協助組織、企業迎向人工智慧時代的到來，解決生活中各式致命痛點。">
+		<meta name="keywords" content="AI Clerk, 昊慧, AI Clerk, 智慧書僮, 人工智慧, 語意理解, 雲端運算, 深度學習, 大數據分析, 自然語言處理, 文本探勘, 機器學習, 
+			問答系統, 智慧虛擬助理, 大數據決策分析平台, 自動語意標記平台, AI Clerk Platform, 電商零售, 醫療, 行銷廣告 ">
+		<meta property="og:title" content="AI Clerk:「AI Clerk」- 會賣東西的機器人" />
+		<meta property="og:type" content='website' />
+		<meta property="og:url" content="https://ai-clerk.com" />
+		<meta property="og:description" content="AI Clerk 以成為提供人工智慧軟體應用服務以及協助建立人工智慧應用服務之工具為終極目標，尤其著重在自然語言處理
+			（Natural Language Processing）、文本探勘（Text Mining）及機器學習（Machine Learning）相關技術與服務應用，希冀協助組織、企業迎向人工智慧時代的到來，解決生活中各式致命痛點。
+			"/>
+		<meta property="og:image" content="https://ai-clerk.com/getimg_name/?img=AI_Clerk.png&location=home"/>
+		<meta property="og:site_name" content="AI Clerk:「AI Clerk」- 會賣東西的機器人" />
+		<meta property="fb:app_id" content="1643032452454268" />
+		<title>AI Clerk:「AI Clerk」- 會賣東西的機器人</title>
+		<!-- Bootstrap -->
+		<link href="{% static 'css/bootstrap.min.css' %}" rel="stylesheet">
+		<!--圓形ICON與FONTER, 需WEBFONTS內的字型檔-->
+		<link rel="stylesheet" href="{% static 'css/fontawesome-all.css' %}">
+		<link href="{% static 'css/animate.min.css' %}" rel="stylesheet">
+		<link href="{% static 'css/prettyPhoto.css' %}" rel="stylesheet">
+		<link href="{% static 'css/main.css' %}" rel="stylesheet">
+		<link href="{% static 'css/responsive.css' %}" rel="stylesheet">
+		<!--[if lt IE 9]>
+		<script src="js/html5shiv.js"></script>
+		<script src="js/respond.min.js"></script>
+		<![endif]-->       
+	</head>
+	<body class="homepage">
+		<header id="header">
+			<nav class="navbar navbar-fixed-top" role="banner">
+				<div class="container">
+					<div class="navbar-header">
+						<a style="height: auto;max-width: 50%;" class="navbar-brand" href="http://www.itri.org.tw"><img src="/getimg_name/?img=itri.png&location=home" class="img-responsive" alt="工業技術研究院" ></a>
+						<a style="height: auto;max-width: 50%;" class="navbar-brand" href="/index"><img src="/getimg_name/?img=AI_Clerk.png&location=home" class="img-responsive" alt="AI Clerk 昊慧"> </a>
+					</div>
+					<div class="text-right" >
+						<!--a class="btn btn-outline-primary" href="/eng/index/"-->
+						<a class="btn btn-outline-primary">
+						English
+						</a>|
+						<!--a class="btn btn-outline-primary" href="/cn/index/"-->
+						<a class="btn btn-outline-primary">
+						简体中文
+						</a>
+						<!-- <button type="button" class="btn btn-outline-primary" data-toggle="modal" style="border: 2px solid #008CBA;"> -->
+						<!--button type="button" class="btn btn-outline-primary" data-toggle="modal" data-target="#exampleModal" style="border: 2px solid #008CBA;"-->
+						<!-- <a href=mailto:aiclerkmail@gmail.com?subject="請教AI_Clerk，感謝">聯絡我們</a> -->
+						<!-- </button> -->
+					</div>
+					<!-- Modal -->
+					<div class="modal fade" id="exampleModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+						<div class="modal-dialog" role="document">
+							<div class="modal-content">
+								<div class="modal-header">
+									<h5 class="modal-title" id="exampleModalLabel">聯絡我們</h5>
+									<button type="button" class="close" data-dismiss="modal" aria-label="Close">
+									<span aria-hidden="true">&times;</span>
+									</button>
+								</div>
+								<!--聯絡表單-->
+								<div class="modal-body">
+									<!--form method="POST" action="http://formspree.io/aiclerkmail@gmail.com"-->
+									<form method="POST">
+										<div class="form-group">
+											<label for="exampleDropdownFormEmail2">姓名</label>
+											<input name="name" type="text" class="form-control" id="name" placeholder="">
+											<label  for="exampleDropdownFormEmail2">信箱</label>
+											<input type="email" class="form-control" id="email" placeholder="email@example.com">
+											<label for="exampleDropdownFormEmail2">連絡電話</label>
+											<input type="text" class="form-control" id="phone" placeholder="" >
+											<label for="exampleDropdownFormEmail2">需要甚麼服務</label>
+											<select class="form-control" id="option">
+												<option>---</option>
+												<option>尋求合作</option>
+												<option>索取資料</option>
+												<option>請教職缺</option>
+												<option>採訪與演講邀約</option>
+												<option>其他</option>
+											</select>
+											<label for="message-text" class="col-form-label">留言</label>
+											<textarea class="form-control" id="message-text"  rows="3"></textarea>
+											<input type="hidden" name="_subject" value="新郵件">
+										</div>
+										<div class="modal-footer">
+											<input type="submit" class="btn btn-primary" value="送出" onclick="sent_mail()">
+										</div>
+									</form>
+								</div>
+								<div class="modal-footer">
+								</div>
+							</div>
+						</div>
+					</div>
+				<div class="collapse navbar-collapse navbar-right">
+						<ul class="nav nav-pills">
+							<li class="nav-item dropdown">
+								<a class="nav-link dropdown-toggle" data-toggle="dropdown" href="#" role="button" aria-haspopup="true" 
+									aria-expanded="false">關於</a>
+								<ul class="dropdown-menu">
+									<li><a class="dropdown-item" href="/about">背景簡介</a></li>
+									<li><a class="dropdown-item" href="/team">團隊成員</a></li>
+									<li><a class="dropdown-item" href="/hornor">榮譽</a></li>
+									<li><a class="dropdown-item" href="/responsobility">社會公益</a></li>
+								</ul>
+							</li>
+							<li class="nav-item dropdown">
+								<a class="nav-link dropdown-toggle" data-toggle="dropdown" href="#" role="button" aria-haspopup="true" 
+									aria-expanded="false">最新消息</a>
+								<ul class="dropdown-menu">
+									<li><a class="dropdown-item" href="/report?0">最新快訊</a></li>
+									<li><a class="dropdown-item" href="/news?0">新知分享</a></li>
+									<li><a class="dropdown-item" href="/join-us">徵才訊息</a></li>
+								</ul>
+							</li>
+							<li class="nav-item">
+								<a class="nav-link" href="/technology">核心技術</a>
+							</li>
+							<li class="nav-item">
+								<a class="nav-link disabled" href="/product">產品服務</a>
+							</li>
+							<li class="nav-item">
+								<a class="nav-link disabled" href="/solution">解決方案</a>
+							</li>
+							<li class="nav-item">
+								<a class="nav-link disabled" href="/partner">合作夥伴</a>
+							</li>
+							<li class="nav-item">
+								<a class="nav-link disabled" href="/join-us">加入我們</a>
+							</li>
+						</ul>
+					</div>
+				</div>
+				<!--/.container-->
+			</nav>
+			<!--/nav-->
+		</header>
+		<!--/header-->
+		<!--右邊上下滑動按鈕-->
+		<div id="up-button">
+			<a href='#top'><i class="fa fa-angle-up fa-5x" aria-hidden="true"></i></a>
+		</div>
+		<section id="feature" id="top">
+			<div class="container">
+				<div class="row">
+					<div class="features">
+						<div class="col-md-4 col-sm-6 wow fadeInDown" data-wow-duration="1000ms" data-wow-delay="600ms">
+							<div class="feature-wrap">
+								<a href='#semantic'><i class="fas fa-clipboard-list"></i></a>
+								<h2><a href='#semantic'>語意理解</a></h2>
+								<h3>文本語意分析將在2020年創造64億美元市場</h3>
+								</a>
+								<sub> [Allied Market Research, 2015]</sub>
+							</div>
+						</div>
+						<!--/.col-md-4-->
+						<div class="col-md-4 col-sm-6 wow fadeInDown" data-wow-duration="1000ms" data-wow-delay="600ms">
+							<div class="feature-wrap">
+								<a href='#deep'><i class="fa fa-trophy"></i></a>
+								<h2><a href='#deep'>深度學習</a></h2>
+								<h3>預計將在2025年創造102億美元的市場</h3>
+								</a>
+								<sub>[Grand View Research, 2017]</sub>
+							</div>
+						</div>
+						<!--/.col-md-4-->
+						<div class="col-md-4 col-sm-6 wow fadeInDown" data-wow-duration="1000ms" data-wow-delay="600ms">
+							<div class="feature-wrap">
+								<a href='#cloud'><i class="fa fa-cloud"></i></a>
+								<h2><a href='#cloud'>雲端運算</a></h2>
+								<a href='#cloud'>
+									<h3>服務預計到2020年，市場收入將超過4110億美元</h3>
+								</a>
+								<sub>[Statista, 2018]</sub>
+							</div>
+						</div>
+						<!--/.col-md-4-->
+						<div class="col-md-4 col-sm-6 wow fadeInDown" data-wow-duration="1000ms" data-wow-delay="600ms">
+							<div class="feature-wrap">
+								<a href='#big_data'><i class="fa fa-spinner"></i></a>
+								<h2><a href='#big_data'>大數據分析</a></h2>
+								<a href='#big_data'>
+									<h3>在2026年全球將創造922億美元的收益</h3>
+								</a>
+								<sub>[Statista, 2018]</sub>
+							</div>
+						</div>
+						<!--/.col-md-4-->
+						<div class="col-md-4 col-sm-6 wow fadeInDown" data-wow-duration="1000ms" data-wow-delay="600ms">
+							<div class="feature-wrap">
+								<a href='#nlp'><i class="fas fa-language"></i></a>
+								<h2><a href='#nlp'>自然語言處理</a></h2>
+								<a href='#nlp'>
+									<h3>預估將於2021年創造1,60.7億美元的市場</h3>
+								</a>
+								<sub>[MarketsandMarkets, 2016]</sub>
+							</div>
+						</div>
+						<!--/.col-md-4-->
+						<div class="col-md-4 col-sm-6 wow fadeInDown" data-wow-duration="1000ms" data-wow-delay="600ms">
+							<div class="feature-wrap">
+								<a href='#machine'><i class="fa fa-cogs" aria-hidden="true"></i></a>
+								<h2><a href='#machine'>機器學習</a></h2>
+								<a href='#machine'>
+									<h3>預計將在2022年創造88.1億美元的市場</h3>
+								</a>
+								<sub>[Research And Markets, 2017]</sub>
+							</div>
+						</div>
+						<!--/.col-md-4-->
+						<!--div class="col-md-4 col-sm-6 wow fadeInDown" data-wow-duration="1000ms" data-wow-delay="600ms">
+							<div class="feature-wrap">
+								<a href='#mining'><i class="fa fa-list-alt"></i></a>
+								<a href='#mining'>
+									<h2>文本探勘</h2>
+								</a>
+								<a href='#mining'>
+									<h3>預計在2024年市場將上升至121.6億美元</h3>
+								</a>
+								<sub>[Transparency Market Research, 2016]</sub>
+							</div>
+						</div-->
+						<!--/.col-md-4-->
+						<!--div class="col-md-4 col-sm-6 wow fadeInDown" data-wow-duration="1000ms" data-wow-delay="600ms">
+							<div class="feature-wrap">
+								<a href='#retrieval'><i class="fa fa-comments"></i></a>
+								<a href='#retrieval'>
+									<h2>問答系統</h2>
+								</a>
+								<a href='#retrieval'>
+									<h3>問答為核心的虛擬助理到2024年預計市場將超過110億美元</h3>
+								</a>
+								<sub>[Global Markets Insight, 2016]</sub>
+							</div>
+						</div>
+						<!--/.--col-md-4-->
+						<!--div class="col-md-4 col-sm-6 wow fadeInDown" data-wow-duration="1000ms" data-wow-delay="600ms">
+							<div class="feature-wrap">
+								<a href='#computer_vision'><i class="fa fa-image"></i></a>
+								<a href='#computer_vision'>
+									<h2>影像處理</h2>
+								</a>
+								<a href='#image'>
+									<h3>預估在2021年將值389.2億美元的市場</h3>
+								</a>
+								<sub>[MarketsandMarkets, 2017]</sub>
+							</div>
+						</div-->
+						<!--/.col-md-4-->
+					</div>
+					<!--/.services-->
+				</div>
+				<!--/.row-->    
+			</div>
+			<!--/.container-->
+			<div id="nlp"></div>
+		</section>
+		<!--/#feature-->
+		<section id="recent-works" >
+			<div class="container">
+				<div class="center wow fadeInDown" id='semantic'>
+					<div class="col-sm-3 " style="margin-top: 30px">
+						<img src="/getimg_name/?img=semantic.png&location=technology" >
+					</div>
+					<div class="col-sm-9 text-left">
+						<h2 ><strong>語意理解</strong></h2>
+						<p class="lead"><dd>語意理解技術是眾多相關AI應用服務系統（如：虛擬助理、語意搜尋、文本生成...等）的核心關鍵技術，它可自動理解字串在文章中的語意類別。譬如：可以知道句子〝XC60搭載的City Safety都會安全防護系統。此外，越來越多手機可無線充電〞其中，〝City Safety都會安全防護系統〞和〝無線充電〞這兩字串分別代表「規格」和「功能」的語意概念。</dd><br>
+							<dd>傳統語意理解技術研發過程多經三階段(1)人工標記語料庫(2)語意理解模組建立(3)錯誤分析。藉由錯誤分析結果，不斷回饋與進行模組修正，而人工標記語料庫佔了所有研發過程幾乎95％以上的時間與人力。 </dd><br>
+							<dd>AI Clerk語意理解模組強調只需人工標記小量語料，可自動擴充標記語料。以3C類商品文本語意理解進行實驗評估，發現減少99.5%以上人工蒐集和標記語料的時間，便可達到與以人工標記語料為基底所建立之模組相抗衡的結果；實驗比對加上自動擴充語料的模組，其效能甚至可能超越僅以純人工標記語料所建立之模組。</dd><br>
+						</p>
+						<div align="center" class="embed-responsive embed-responsive-16by9">
+						<iframe class="embed-responsive-item" src="https://www.youtube.com/embed/C201GtxmWow?rel=0&autoplay=1&loop=1" frameborder="0" gesture="media" allowfullscreen></iframe>			
+						</div>			
+						
+						<img src="/getimg_name/?img=technology_semantic_1.png&location=technology" style="max-width: 100%;">
+						<img src="/getimg_name/?img=technology_semantic_2.png&location=technology" style="max-width: 100%;">
+						
+						
+						<img src="/getimg_name/?img=technology_semantic_3.png&location=technology" style="max-width: 100%;">
+						<img src="/getimg_name/?img=technology_semantic_4.png&location=technology" style="max-width: 100%;">
+						<img src="/getimg_name/?img=technology_semantic_5.png&location=technology" style="max-width: 100%;">
+
+						
+					</div>
+					相關應用>> <a href="/ai_clerk" style="margin-right:40%">AI Clerk</a>  
+					<hr style="border-color:#21989e ">
+				</div>
+				<div class="center wow fadeInDown" id="deep">
+					<div class="col-sm-3 " style="margin-top: 30px">
+						<img src="/getimg_name/?img=deep.png&location=technology" >
+					</div>
+					<div class="col-sm-9 text-left" >
+						<h2 ><strong>深度學習</strong></h2>
+						<p class="lead">深度學習（Deep Learning）為基於類神經網路（Neural Network）理論和學習資料表徵（Learning Data Representations）為基礎的機器學習
+							（Machine Learning）一分支。因AlphaGo大勝世界棋王，此役除了讓AlphaGo一戰成名，更提升了大眾對深度學習技術之能耐的信賴與關注。深度學習中如時間遞歸神經網絡（Recurrent Neural 
+							Network, RNN）、卷積神經網路（Convolutional Neural Network, CNN）...等，廣泛應用於AI Clerk的技術研發中。
+						</p>
+					</div>
+					<a style="margin-right:40%"></a>
+					<hr style="border-color:#21989e ">
+				</div>
+				<div class="center wow fadeInDown" id="cloud">
+					<div class="col-sm-3 fa-5x" style="margin-top: 30px" >
+						<img src="/getimg_name/?img=cloud.png&location=technology" >
+					</div>
+					<div class="col-sm-9 text-left" >
+						<h2 ><strong>雲端運算</strong></h2>
+						<p class="lead">AI Clerk透過雲端運算（Cloud Computing）加速運算，並以Software as a Service方式得供各智慧服務的結果。
+						</p>
+					</div>
+					<a style="margin-right:40%"></a>  
+					<hr style="border-color:#21989e ">
+				</div>
+				<div class="center wow fadeInDown" id="big_data">
+					<div class="col-sm-3 " id="big_data" style="margin-top: 30px">
+						<img src="/getimg_name/?img=big_data.png&location=technology" >
+					</div>
+					<div class="col-sm-9 text-left" >
+						<h2 ><strong>大數據分析</strong></h2>
+						<p class="lead">在具大量（Volume）、快速（Velocity）、多樣性（Variety）、多變性（Variability）與真實性（Veracity） 的巨量資料中，AI Clerk嘗試利用機器學習、資料探勘或自然語言
+							處理等方法，分析出額外的資訊以及資訊間的關聯，企圖建立各式輔助決策支援系統，創造商業價值。
+						</p>
+					</div>
+					 <a style="margin-right:40%"></a> 
+					<hr style="border-color:#21989e ">
+				</div>
+				<div class="center wow fadeInDown" id="nlp" >
+					<div class="col-sm-3 " id="nlp" style="margin-top: 30px">
+						<img src="/getimg_name/?img=nlp.png&location=technology" >
+					</div>
+					<div class="col-sm-9 text-left" >
+						<h2 ><strong>自然語言處理</strong></h2>
+						<p class="lead">自然語言處理屬人工智慧和語言學領域的分支研究領域，目的在於讓電腦瞭解人類的語言。自然語言處理和語言學領域的計算語言學（Computational Linguistics）有相當多重疊處。
+
+							自然語言處理的典型任務，如：
+							<ul>
+							<li>問答系統（Question Answering）：智慧回覆，如：諮詢<a href="/ai_clerk">「AI Clerk」</a>可獲得即時個人化商品推薦結果。</li>
+							<li>語意理解（Language Understanding）、語意標記（Concept Labeling）：自動理解字串在文章中的語意類別。譬如：可以知道句子〝越來越多手機可無線充電〞中的〝無線充電〞所表達的是一種「功能」的概念。</li>
+							<li>關鍵詞擷取（Keyword Extraction）：擷取出文章的關鍵詞，提供友善、快速瀏覽與篩選文章。</li>
+							<li>自動文本分類（Text Classification）：將文章自動歸屬於某類別。譬如：可將〝我的Galaxy Note 7竟然爆炸了〞這樣的內容自動分類到「抱怨類文章」。</li>
+							<li>文本分群（Text Clustering）：群聚相似文章。譬如：將來自不同媒體所發佈有關〝iPhone X〞的報導內容，自動判對屬於同一主題系列報導。</li>
+							<li>錯誤校正（Error Correction）：校正輸入錯誤的字串。譬如：可將〝我喜歡透過手機學之事〞自動修正為〝我喜歡透過手機學知識〞。</li>
+							<li>語言模組（Language Model）：經由已知字串預測出下一個可能出現的字詞。譬如：當輸入〝我想買適合玩遊〞的字串，系統預測出下一個想要輸入的中文字可能是〝戲〞。</li>
+							<li>語意關係擷取（Relation Extraction）：得以理解文本中兩個字串之間的語意關係。譬如：可識別 〝我認真覺得 iPhone X 比小米好搶〞 這句話中〝iPhone X〞和〝小米〞這兩個字串是拿來被「比較」的。</li>
+							<li>文本生成（Text Generation）：給予部分資訊，自動生成完整句子或文章。
+							</ul>
+							...等
+						</p>
+					</div>
+					相關應用>> <a href="/ai_clerk" style="margin-right:40%">AI Clerk</a>    
+					<hr style="border-color:#21989e ">
+				</div>
+				<div class="center wow fadeInDown" id="machine">
+					<div class="col-sm-3 " id="machine" style="margin-top: 30px">
+						<img src="/getimg_name/?img=machine.png&location=technology" >
+					</div>
+					<div class="col-sm-9 text-left" >
+						<h2 ><strong>機器學習</strong></h2>
+						<p class="lead">機器學習從資料數據中透過計算式統計（Computational Statistics）或論理方法建構演算法或模組以產生可信賴、可重複的決策和
+							預測結果。應用機器學習讓自然語言處理（Natural Language Processing, NLP）、語意理解（Language Understanding）、自動分類（Classification）、智慧推薦（Intelligent Recommendation）、影像辨
+							識（Image recognition）、文本生成（Text Generation）...等任務得以實現。
+						</p>
+					</div>
+					<a style="margin-right:40%"></a>  
+					<hr style="border-color:#21989e ">
+				</div>
+				<div class="center wow fadeInDown" id="mining">
+					<div class="col-sm-3 " id="mining" style="margin-top: 30px">
+						<img src="/getimg_name/?img=mining.png&location=technology" >
+					</div>
+					<div class="col-sm-9 text-left" >
+						<h2 ><strong>文本探勘</strong></h2>
+						<p class="lead">AI Clerk挑戰從非結構資料擷取出具語意訊息有意義的結構化資訊，挖掘出各資訊間的關連性。譬如：找出各文章中屬於各商品的型號、評論、功能等相對應之字串，並進一步找出其之間是否有關連。</p>
+					</div>
+					<a style="margin-right:40%"></a>  
+					<hr style="border-color:#21989e ">
+				</div>
+				<!--div class="center wow fadeInDown" id="retrieval">
+					<div class="col-sm-3 " id="retrieval" style="margin-top: 30px">
+						<img src="qa.png" >
+					</div>
+					<div class="col-sm-9 text-left" >
+						<h2 >問答系統</h2>
+
+						<p class="lead">使用者以自然語言輸入問句，系統從一堆文件中擷取片段資訊作為回應。讓屬於智慧虛擬助理的AI Clerk得以實踐。</p>
+					</div>
+					<a style="margin-right:40%"></a>         
+					<hr style="border-color:#21989e ">
+				</div>
+				<div class="center wow fadeInDown" id="computer_vision">
+					<div class="col-sm-3 " id="computer_vision" style="margin-top: 30px">
+						<img src="computer_vision.png" >
+					</div>
+					<div class="col-sm-9 text-left" >
+						<h2 >影像處理</h2>
+						<p class="lead">AI Clerk尤其著重在影像辨識於醫療領域的利用輔助醫生判斷各項各醫療影像資訊。</p>
+					</div>
+					<a style="margin-right:40%"></a>   
+					<hr style="border-color:#21989e">
+				</div-->
+			</div>
+			<!--/.container-->
+		</section>
+		<!--/#recent-works-->	
+		<section id="bottom">
+			<div class="container wow fadeInDown" data-wow-duration="1000ms" data-wow-delay="600ms">
+				<div class="row">
+					<div class="col-md-3 col-sm-6">
+						<div class="widget">
+							<h3>關於</h3>
+							<ul>
+								<li><a href="/about">背景簡介</a></li>
+								<li><a href="/team">團隊成員</a></li>
+								<li><a href="/hornor">榮譽</a></li>
+								<li><a href="/responsobility">社會公益</a></li>
+							</ul>
+						</div>
+					</div>
+					<!--/.col-md-3-->
+					<div class="col-md-3 col-sm-6">
+						<div class="widget">
+							<h3 >最新消息</h3>
+							<ul>
+								<li><a href="/report?0">最新快訊</a></li>
+								<li><a href="/news?0">新知分享</a></li>
+								<li><a href="/join-us">徵才訊息</a></li>
+							</ul>
+						</div>
+					</div>
+					<!--/.col-md-3-->
+					<div class="col-md-3 col-sm-6">
+						<div class="widget">
+							<h3>
+								<ul>
+									<li><a href="/technology">核心技術</a></li>
+									<li><a href="/product">產品服務</a></li>
+									<li><a href="/solution">解決方案</a></li>
+								</ul>
+							</h3>
+						</div>
+					</div>
+					<!--/.col-md-3-->
+					<div class="col-md-3 col-sm-6">
+						<div class="widget">
+							<h3>
+								<ul>
+									<li><a href="/partner">合作夥伴</a></li>
+									<li><a href="/join-us">加入我們</a></li>
+								</ul>
+							</h3>
+						</div>
+					</div>
+					<!--/.col-md-3-->
+				</div>
+			</div>
+		</section>
+		<!--/#bottom-->
+		<div class="top-bar">
+			<div class="container">
+				<div class="row">
+					<div class="col-lg-12">
+						<div class="social">
+							<ul class="social-share">
+								<li><a href="https://www.facebook.com/ai.clerk/" target="_blank""><i class="fab fa-facebook-f"></i></a></li>
+								<li><a href="/ai_clerk"><i class="fab fa-line"></i></a></li>
+								<!--li><a href="https://www.youtube.com/channel/UCSZP1-X1e0KQC2jWOWrlfSQ" target="_blank"><i class="fab fa-youtube"></i></a></li-->
+
+							</ul>
+						</div>
+					</div>
+					<div style="color:#fff;text-align: center;">
+						<h6 style="color:#fff;font-size: 15px;">Tel : (03)573-2002</h6>
+						<h6 style="color:#fff;font-size: 15px;">Email : aiclerkmail@gmail.com</h6>
+						<h6 style="color:#fff;font-size: 15px;">&copy;2018 ITRI. All rights reserved.</h6>
+					</div>
+				</div>
+			</div>
+			<!--/.container-->
+		</div>
+		<!--/.top-bar-->
+		<!-- jQuery (necessary for Bootstrap's JavaScript plugins) -->
+		<script src="{% static 'js/main.js' %}"></script>
+		<script src="{% static 'js/jquery.js' %}"></script>
+		<script src="{% static 'js/bootstrap.min.js' %}"></script>
+		<script src="{% static 'js/jquery.prettyPhoto.js' %}"></script>
+		<script src="{% static 'js/jquery.isotope.min.js' %}"></script>   
+		<script src="{% static 'js/wow.min.js' %}"></script>
+	</body>
+</html>

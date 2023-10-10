@@ -1,0 +1,851 @@
+﻿<!DOCTYPE html>
+<html lang="en">
+	<head>
+<!-- Global site tag (gtag.js) - Google Analytics -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=UA-118032674-1"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+
+  gtag('config', 'UA-118032674-1');
+</script>
+
+        {% load staticfiles %}
+		<meta name="viewport" content="width=device-width, initial-scale=1">
+		<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+		<meta http-equiv="x-dns-prefetch-control" content="on">
+		<meta http-equiv="X-UA-Compatible" content="chrome=1">
+		<meta name="description" content="AI Clerk 以成為提供人工智慧軟體應用服務以及協助建立人工智慧應用服務之工具為終極目標，尤其著重在自然語言處理（Natural Language Processing）、文本探勘（Text Mining）及機器學習（Machine Learning）相關技術與服務應用，希冀協助組織、企業迎向人工智慧時代的到來，解決生活中各式致命痛點。">
+		<meta name="keywords" content="AI Clerk, 昊慧, 智慧櫃姐, 智慧書僮, 人工智慧, 語意理解, 雲端運算, 深度學習, 大數據分析, 自然語言處理, 文本探勘, 機器學習, 問答系統, 智慧虛擬助理, 大數據決策分析平台, 自動語意標記平台, AI Clerk Platform, 電商零售, 醫療, 行銷廣告 ">
+		<meta property="og:title" content="AI Clerk:「智慧櫃姐」- 會賣東西的機器人" />
+		<meta property="og:type" content='website' />
+		<meta property="og:url" content="https://ai-clerk.com" />
+		<meta property="og:description" content="AI Clerk 以成為提供人工智慧軟體應用服務以及協助建立人工智慧應用服務之工具為終極目標，尤其著重在自然語言處理（Natural Language Processing）、文本探勘（Text Mining）及機器學習（Machine Learning）相關技術與服務應用，希冀協助組織、企業迎向人工智慧時代的到來，解決生活中各式致命痛點。"/>
+		<meta property="og:image" content="https://ai-clerk.com/getimg_name/?img=AI_Clerk.png&location=home"/>
+		<meta property="og:site_name" content="AI Clerk:「智慧櫃姐」- 會賣東西的機器人" />
+		<meta property="fb:app_id" content="1643032452454268" />
+		<title>AI Clerk:「智慧櫃姐」- 會賣東西的機器人</title>
+		<!-- Bootstrap -->
+		<link href="{% static 'css/bootstrap.min.css' %}" rel="stylesheet">
+		<!--圓形ICON與FONTER, 需WEBFONTS內的字型檔-->
+		<link rel="stylesheet" href="{% static 'css/fontawesome-all.css' %}">
+		<link href="{% static 'css/animate.min.css' %}" rel="stylesheet">
+		<link href="{% static 'css/prettyPhoto.css' %}" rel="stylesheet">
+		<link href="{% static 'css/main.css' %}" rel="stylesheet">
+		<link href="{% static 'css/responsive.css' %}" rel="stylesheet">
+		<!--[if lt IE 9]>
+		<script src="js/html5shiv.js"></script>
+		<script src="js/respond.min.js"></script>
+		<![endif]-->       
+	</head>
+	<body class="homepage">
+		<header id="header">
+			<nav class="navbar navbar-fixed-top" role="banner">
+				<div class="container">
+					<div class="navbar-header">
+						<a class="navbar-brand" href="/index"><img src="{% static 'images/AI_Clerk.png' %}" class="img-responsive" alt="AI Clerk 昊慧"> </a>
+					</div>
+					<div class="text-right" >
+						<!--a class="btn btn-outline-primary" href="/eng/index"-->
+						<a class="btn btn-outline-primary">
+						English
+						</a>|
+						<!--a class="btn btn-outline-primary" href="/cn/index"-->
+						<a class="btn btn-outline-primary">
+						简体中文
+						</a>
+						<button type="button" class="btn btn-outline-primary" data-toggle="modal" style="border: 2px solid #008CBA;">
+							<!--button type="button" class="btn btn-outline-primary" data-toggle="modal" data-target="#exampleModal" style="border: 2px solid #008CBA;"-->
+							<!-- <a href=mailto:aiclerkmail@gmail.com?subject="請教AI_Clerk，感謝">聯絡我們</a> -->
+						</button>
+					</div>
+					<!-- Modal -->
+					<div class="modal fade" id="exampleModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+						<div class="modal-dialog" role="document">
+							<div class="modal-content">
+								<div class="modal-header">
+									<h5 class="modal-title" id="exampleModalLabel">聯絡我們</h5>
+									<button type="button" class="close" data-dismiss="modal" aria-label="Close">
+									<span aria-hidden="true">&times;</span>
+									</button>
+								</div>
+								<!--聯絡表單-->
+								<div class="modal-body">
+									<!--form method="POST" action="http://formspree.io/aiclerkmail@gmail.com"-->
+									<form method="POST">
+										<div class="form-group">
+											<label for="exampleDropdownFormEmail2">姓名</label>
+											<input name="name" type="text" class="form-control" id="name" placeholder="">
+											<label  for="exampleDropdownFormEmail2">信箱</label>
+											<input type="email" class="form-control" id="email" placeholder="email@example.com">
+											<label for="exampleDropdownFormEmail2">連絡電話</label>
+											<input type="text" class="form-control" id="phone" placeholder="" >
+											<label for="exampleDropdownFormEmail2">需要甚麼服務</label>
+											<select class="form-control" id="option">
+												<option>---</option>
+												<option>尋求合作</option>
+												<option>索取資料</option>
+												<option>請教職缺</option>
+												<option>採訪與演講邀約</option>
+												<option>其他</option>
+											</select>
+											<label for="message-text" class="col-form-label">留言</label>
+											<textarea class="form-control" id="message-text"  rows="3"></textarea>
+											<input type="hidden" name="_subject" value="新郵件">
+										</div>
+										<div class="modal-footer">
+											<input type="submit" class="btn btn-primary" value="送出" onclick="sent_mail()">
+										</div>
+									</form>
+								</div>
+								<div class="modal-footer">
+								</div>
+							</div>
+						</div>
+					</div>
+					<div class="collapse navbar-collapse navbar-right">
+						<ul class="nav nav-pills">
+							<li class="nav-item dropdown">
+								<a class="nav-link dropdown-toggle" data-toggle="dropdown" href="#" role="button" aria-haspopup="true" 
+									aria-expanded="false">關於</a>
+								<ul class="dropdown-menu">
+									<li><a class="dropdown-item" href="/about">背景簡介</a></li>
+									<li><a class="dropdown-item" href="/team">團隊成員</a></li>
+									<li><a class="dropdown-item" href="/hornor">榮譽</a></li>
+									<li><a class="dropdown-item" href="/responsobility">社會公益</a></li>
+								</ul>
+							</li>
+							<li class="nav-item dropdown">
+								<a class="nav-link dropdown-toggle" data-toggle="dropdown" href="#" role="button" aria-haspopup="true" 
+									aria-expanded="false">最新消息</a>
+								<ul class="dropdown-menu">
+									<li><a class="dropdown-item" href="/report?0">最新快訊</a></li>
+									<li><a class="dropdown-item" href="/news?0">新知分享</a></li>
+									<li><a class="dropdown-item" href="/join-us">徵才訊息</a></li>
+								</ul>
+							</li>
+							<li class="nav-item">
+								<a class="nav-link" href="/technology">核心技術</a>
+							</li>
+							<li class="nav-item">
+								<a class="nav-link disabled" href="/product">產品服務</a>
+							</li>
+							<li class="nav-item">
+								<a class="nav-link disabled" href="/solution">解決方案</a>
+							</li>
+							<li class="nav-item">
+								<a class="nav-link disabled" href="/partner">合作夥伴</a>
+							</li>
+							<li class="nav-item">
+								<a class="nav-link disabled" href="/join-us">加入我們</a>
+							</li>
+						</ul>
+					</div>
+				</div>
+				<!--/.container-->
+			</nav>
+			<!--/nav-->
+		</header>
+		<!--/header-->
+		<section id="about-us">
+			<div class="container">
+				<!-- our-team -->
+				<div class="team">
+					<div class="center wow fadeInDown">
+						<br><br>
+						<h2><strong>團隊成員</strong></h2>
+						<!--p class="lead">AI Clerk 團隊是由一群專精於人工智慧（Artificial Intelligence, AI）和雲端運算（Cloud Computing）技術研發的成員所組成</p-->
+					</div>
+					<div class="row clearfix">
+						<div class="col-md-4 col-sm-6">
+							<div class="single-profile-top wow fadeInDown" data-wow-duration="1000ms" data-wow-delay="300ms">
+								<div class="media">
+									<div class="pull-left">
+										<a href="#"><img class="media-object" src="{% static 'images/team/ceo.png' %}" alt="ceo"></a>
+									</div>
+									<div class="media-body">
+										<BR>
+										<h4><B>張如瑩</B></h4>
+										<h5>專案領導</h5>
+										<h5>Project Leader</h5>
+										<!--h5>執行長</h5>
+										<h5>CEO</h5-->
+										<br>
+									</div>
+								</div>
+								<!--/.media -->
+								<p>
+								<h5>
+									<ul>
+										<font color="#006699">學經歷</font>
+										<li>成功大學資訊工程所博士</li>
+										<li>元智大學資訊管理所MBA</li>
+										<li>工業技術研究院巨資中心工程師</li>
+										<li>金明國際國家網路醫院做醫療資訊處理</li>
+										<li>中央研究院研究助理</li>
+									</ul>
+									<ul>
+										<font color="#006699">專長</font>
+										<li>自然語言處理、文本探勘與分析、資訊檢索以及機器學習領域，累積近 20 年相當紮實且深厚的實作經驗及理論基礎</li>
+										<li>計畫管理、系統分析與設計、技術推廣</li>
+									</ul>
+									<ul>
+										<font color="#006699">榮譽</font>
+										<li>歷年作品曾獲中華民國資訊月、教育部、僑委會、蕃薯藤等獎勵</li>
+									</ul>
+								</h5>
+								</p>
+							</div>
+						</div>
+						<!--/.col-lg-4 -->
+						<!--div class="col-md-4 col-sm-6 col-md-offset-2">
+							<div class="single-profile-top wow fadeInDown" data-wow-duration="1000ms" data-wow-delay="300ms">
+								<div class="media">
+									<div class="pull-left">
+										<a href="#"><img class="media-object" src="{% static 'images/team/coo.png' %}" alt=""></a>
+									</div>
+									<div class="media-body">
+										<BR>
+										<h4><B>   </B></h4>
+										<h5> </h5>
+										<h5></h5>
+										
+										<h5></h5>
+										<br>
+									</div>
+								</div>
+								
+								<p>
+								<h5>
+									<ul>
+										<font color="#006699">學經歷</font>
+										<li>國立成功大學資訊工程碩士，主修網路</li>
+										<li>工業技術研究院巨資中心工程師</li>
+										<li>工業技術研究院雲端中心5年</li>
+										<li>赴日推廣雲端作業系統</li>
+										<li>工研院新創公司雙子星雲端股份有限公司創始成員之一，協助該公司募資新台幣1.2億</li>
+									</ul>
+									<ul>
+										<font color="#006699">專長</font>
+										<li>雲端運算，設計、研發、推廣、維運、訓練一條龍</li>
+									</ul>
+									<ul>
+										<font color="#006699">榮譽</font>
+										<li>2016年工研院資通所產業化貢獻獎金牌</li>
+										<li>2014年新竹市模範勞工</li>
+									</ul>
+								</h5>
+								</p>
+							</div>
+						</div-->
+						<!--/.col-lg-4 -->					
+					</div>
+					<!--/.row -->
+					<div class="row team-bar">
+						<div class="first-one-arrow hidden-xs">
+							<hr>
+						</div>
+						<div class="first-arrow hidden-xs">
+							<hr>
+							<i class="fa fa-angle-up"></i>
+						</div>
+						<div class="second-arrow hidden-xs">
+							<hr>
+							<i class="fa fa-angle-down"></i>
+						</div>
+						<div class="third-arrow hidden-xs">
+							<hr>
+							<i class="fa fa-angle-up"></i>
+						</div>
+						<div class="fourth-arrow hidden-xs">
+							<hr>
+							<i class="fa fa-angle-down"></i>
+						</div>
+					</div>
+					<!--skill_border-->       
+					<div class="row clearfix">
+						<div class="col-md-4 col-sm-6 col-md-offset-2">
+							<div class="single-profile-bottom wow fadeInDown" data-wow-duration="1000ms" data-wow-delay="300ms">
+								<div class="media">
+									<div class="pull-left">
+										<a href="#"><img class="media-object" src="{% static 'images/team/technical_advisor.png' %}" alt=""></a>
+									</div>
+									<div class="media-body">
+										<BR>
+										<h4><B>禹良治</B></h4>
+										<h5>技術顧問</h5>
+										<h5>Technical Advisor</h5>
+										<br>
+									</div>
+								</div>
+								<!--/.media -->
+								<p>
+								<h5>
+									<ul>
+										<font color="#006699">學經歷</font>
+										<li>成功大學資訊工程所博士</li>
+										<li>元智大學資管系副教授兼主任</li>
+										<li>中華民國計算語言學學會理事</li>
+										<li>中華民國計算語言學學會電腦輔助語言教學組召集人</li>
+										<li>ACL SIGHAN Information Officer</li>
+									</ul>
+									<ul>
+										<font color="#006699">專長</font>
+										<li>自然語言處理、情感分析及電腦輔助語言學習</li>
+									</ul>
+									<ul>
+										<font color="#006699">榮譽</font>
+										<li>IJCNLP-2017 Task 4 Microsoft Office客戶意見分類國際評測競賽第一名</li>
+										<li>SemEval-2016 Task 4 (Subtask E) Twitter情感分析國際評測競賽第二名</li>
+										<li>AESW-2016科技英文自動偵錯國際評測競賽的binary prediction任務第二名</li>
+										<li>2017年首屆滬港台三地上銀校園金融科技創新大賽(校園賽)二等獎</li>
+										<li>2017年上海銀行Fintech未來競技場「滬港台金融科技創新Hackathon校園競賽」傳奇團隊第一名</li>
+									</ul>
+								</h5>
+								</p>
+							</div>
+						</div>
+						<!--/.col-lg-4 -->
+						<div class="col-md-4 col-sm-6 col-md-offset-2">
+							<div class="single-profile-bottom wow fadeInDown" data-wow-duration="1000ms" data-wow-delay="300ms">
+								<div class="media">
+									<div class="pull-left">
+										<a href="#"><img class="media-object" src="{% static 'images/team/technical_advisor.png' %}" alt=""></a>
+									</div>
+									<div class="media-body">
+										<BR>
+										<h4><B>Philips Kokoh Prasetyo</B></h4>
+										<h5>技術顧問</h5>
+										<h5>Technical Advisor</h5>
+										<br>
+									</div>
+								</div>
+								<!--/.media -->
+								<h5>
+									<ul>
+										<font color="#006699">學經歷</font>
+										<li>Principal Research Engineer, Living Analytics Research Centre (Singapore)</li>
+										<li>Master, CSIE, National Cheng Kung University (Taiwan)</li>
+									</ul>
+									<ul>
+										<font color="#006699">專長</font>
+										<li>strong technological experience and theoretical foundation in machine learning, natural language processing, deep learning, information retrieval, data mining, big data, social network analysis and information integration</li>
+									</ul>
+									<ul>
+										<font color="#006699">榮譽</font>
+										<li>Kaggle, rank 58th (top 1%)</li>
+										<li>NUS scholarship (2010)</li>
+										<li>ACLCLP thesis award中華民國計算語言學學會碩士論文獎 (2009)</li>
+										<li>DPU scholarship(2007~2009)</li>
+										<li>Summa Cum Laude, Sekolah Tinggi Teknik Surabaya(Indonesia) </li>
+									</ul>
+
+								</h5>
+							</div>
+						</div>
+						<!--/.col-lg-4 -->					
+					</div>
+					<!--/.row -->
+					<div class="row team-bar">
+						<div class="first-one-arrow hidden-xs">
+							<hr>
+						</div>
+						<div class="first-arrow hidden-xs">
+							<hr>
+							<i class="fa fa-angle-up"></i>
+						</div>
+						<div class="second-arrow hidden-xs">
+							<hr>
+							<i class="fa fa-angle-down"></i>
+						</div>
+						<div class="third-arrow hidden-xs">
+							<hr>
+							<i class="fa fa-angle-up"></i>
+						</div>
+						<div class="fourth-arrow hidden-xs">
+							<hr>
+							<i class="fa fa-angle-down"></i>
+						</div>
+					</div>
+					<div class="row clearfix">
+						<div class="col-md-4 col-sm-6">
+							<div class="single-profile-top wow fadeInDown" data-wow-duration="1000ms" data-wow-delay="300ms">
+								<div class="media">
+									<div class="pull-left">
+										<a href="#"><img class="media-object" src="{% static 'images/team/marketing_advisor.png' %}" alt=""></a>
+									</div>
+									<div class="media-body">
+										<BR>
+										<h4><B>李怡慧</B></h4>
+										<h5>行銷顧問</h5>
+										<h5>Marketing Advisor</h5>
+										<br>
+									</div>
+								</div>
+								<!--/.media -->
+								<p>
+								<h5>
+									<ul>
+										<font color="#006699">學經歷</font>
+										<li>University of Bath管理學院博士</li>
+										<li>國立高雄科技大學行銷與流通管理系助理教授</li>
+									</ul>
+									<ul>
+										<font color="#006699">專長</font>
+										<li>質性研究</li>
+										<li>線上溝通行為、醫病溝通、社群媒體、數位行銷等</li>
+										<li>在科技製造產業與跨國商業合作上有多年實務經驗，近年來亦投入與零售產業及醫病關係、醫病溝通有關的研究議題有關的研究議題</li>
+									</ul>
+									<!--ul><font color="#006699">榮譽</font>
+										<li>2011年、2013年、2014年、及2017年台灣婦產科醫學會徐千田防癌研究基金會優秀論文獎</li>
+										
+										</ul-->
+								</h5>
+								<br><br><br>
+								</p>
+							</div>
+						</div>
+						<!--/.col-lg-4 -->
+						<div class="col-md-4 col-sm-6 col-md-offset-2">
+							<div class="single-profile-top wow fadeInDown" data-wow-duration="1000ms" data-wow-delay="300ms">
+								<div class="media">
+									<div class="pull-left">
+										<a href="#"><img class="media-object" src="{% static 'images/team/cfo.png' %}" alt=""></a>
+									</div>
+									<div class="media-body">
+										<BR>
+										<h4><B>陳韋綸</B></h4>
+										<h5>工程師</h5>
+										<h5>Engineer</h5>
+										<!--h5>財務長</h5>
+										<h5>CFO</h5-->
+										<br>
+									</div>
+								</div>
+								<!--/.media -->
+								<p>
+								<h5>
+									<ul>
+										<font color="#006699">學經歷</font>
+										<li>交通大學資訊管理所碩士</li>
+										<li>中央大學資訊管理系學士 兼會計學分學程</li>
+										<li>工業技術研究院巨資中心副工程師</li>
+									</ul>
+									<ul>
+										<font color="#006699">專長</font>
+										<li>金融科技、機器學習、深度學習</li>
+									</ul>
+									<ul>
+										<font color="#006699">榮譽</font>
+										<li>2016 FinTech創意大賞企劃競賽 證券期貨類特色獎</li>
+										<li>2016 第四屆梅竹黑克松 塔圖科技組第一名</li>
+										<li>2016 玉山校園黑客松 入圍決賽</li>
+										<li>交通大學管理學院榮譽狀</li>
+										<li>105學年度博碩士期貨與選擇權論文獎學金（臺灣期貨交易所）</li>
+									</ul>
+								</h5>
+								</p>
+							</div>
+						</div>
+						<!--/.col-lg-4 -->					
+					</div>
+					<!--/.row -->
+					<div class="row team-bar">
+						<div class="first-one-arrow hidden-xs">
+							<hr>
+						</div>
+						<div class="first-arrow hidden-xs">
+							<hr>
+							<i class="fa fa-angle-up"></i>
+						</div>
+						<div class="second-arrow hidden-xs">
+							<hr>
+							<i class="fa fa-angle-down"></i>
+						</div>
+						<div class="third-arrow hidden-xs">
+							<hr>
+							<i class="fa fa-angle-up"></i>
+						</div>
+						<div class="fourth-arrow hidden-xs">
+							<hr>
+							<i class="fa fa-angle-down"></i>
+						</div>
+					</div>
+					<!--skill_border--> 
+					<div class="row clearfix">
+						<div class="col-md-4 col-sm-6 col-md-offset-2">
+							<div class="single-profile-bottom wow fadeInUp" data-wow-duration="1000ms" data-wow-delay="600ms">
+								<div class="media">
+									<div class="pull-left">
+										<a href="#"><img class="media-object" src="{% static 'images/team/cto.png' %}" alt=""></a>
+									</div>
+									<div class="media-body">
+										<BR>
+										<h4><B>潘桓毅</B></h4>
+										<h5>工程師</h5>
+										<h5>Engineer</h5>
+										<!--h5>首席工程師</h5>
+										<h5>VP Engineer</h5-->
+										<br>
+									</div>
+								</div>
+								<!--/.media -->
+								<p>
+								<h5>
+									<ul>
+										<font color="#006699">學經歷</font>
+										<li>元智大學資訊管理所碩士</li>
+										<li>工業技術研究院巨資中心副工程師</li>
+										<li>協助元智大學資服處開發自主學習診斷系統，以機器學習預測學生個人於課堂相關表現</li>
+									</ul>
+									<ul>
+										<font color="#006699">專長</font>
+										<li>機器學習、自然語言處理、深度學習</li>
+									</ul>
+									<ul>
+										<font color="#006699">榮譽</font>
+										<li>2014 第18屆資訊應用服務創新競賽電子發票創新應用組入圍決賽</li>
+									</ul>
+								</h5>
+								<br>
+								</p>
+							</div>
+						</div>
+						<div class="col-md-4 col-sm-6 col-md-offset-2">
+							<div class="single-profile-bottom wow fadeInDown" data-wow-duration="1000ms" data-wow-delay="300ms">
+								<div class="media">
+									<div class="pull-left">
+										<a href="#"><img class="media-object" src="{% static 'images/team/cto.png' %}" alt=""></a>
+									</div>
+									<div class="media-body">
+										<BR>
+										<h4><B>林柏霖</B></h4>
+										<h5>工程師</h5>
+										<h5>Engineer</h5>
+										<!--h5>技術長</h5>
+										<h5>CTO</h5-->
+										<br>
+									</div>
+								</div>
+								<!--/.media -->
+								<p>
+								<h5>
+									<ul>
+										<font color="#006699">學經歷</font>
+										<li>元智大學資訊管理所碩士</li>
+										<li>工業技術研究院巨資中心副工程師</li>
+									</ul>
+									<ul>
+										<font color="#006699">專長</font>
+										<li>自然語言處理、深度學習、機器學習、類神經網路</li>
+									</ul>
+									<ul>
+										<font color="#006699">榮譽</font>
+										<li>2016年AESW 科技英文自動偵錯國際競賽的binary prediction任務與哈佛、史丹佛、都柏林等團隊競賽，獲得亞軍</li>
+										<li>2017年元智大學校外競賽傑出表現獎</li>
+										<li>2014第18屆全國大專校院資訊資訊應用服務創新競賽知識達人實務應用組亞軍</li>
+									</ul>
+								</h5>
+								</p>									
+							</div>
+						</div>
+					</div>
+					<!--/.row -->
+					<div class="row team-bar">
+						<div class="first-one-arrow hidden-xs">
+							<hr>
+						</div>
+						<div class="first-arrow hidden-xs">
+							<hr>
+							<i class="fa fa-angle-up"></i>
+						</div>
+						<div class="second-arrow hidden-xs">
+							<hr>
+							<i class="fa fa-angle-down"></i>
+						</div>
+						<div class="third-arrow hidden-xs">
+							<hr>
+							<i class="fa fa-angle-up"></i>
+						</div>
+						<div class="fourth-arrow hidden-xs">
+							<hr>
+							<i class="fa fa-angle-down"></i>
+						</div>
+					</div>
+					<!--skill_border--> 
+					<div class="row clearfix">
+						<div class="col-md-4 col-sm-6">
+							<div class="single-profile-top wow fadeInDown" data-wow-duration="1000ms" data-wow-delay="300ms">
+
+								<div class="media">
+									<div class="pull-left">
+										<a href="#"><img class="media-object" src="{% static 'images/team/girl_engineer.png' %}" alt=""></a>
+									</div>
+									<div class="media-body">
+										<BR>
+										<h4><B>謝佳恩</B></h4>
+										<h5>工程師</h5>
+										<h5>Engineer</h5>
+										<br>
+									</div>
+								</div>
+								<!--/.media -->
+								<p>
+								<h5>
+									<ul>
+										<font color="#006699">學經歷</font>
+										<li>嘉義大學資訊工程學士</li>
+										<li>工業技術研究院巨資中心</li>
+										<li>嘉義大學資訊系學會長</li>
+									</ul>
+									<ul>
+										<font color="#006699">專長</font>
+										<li>機器學習、網頁開發、資料庫設計</li>
+									</ul>
+								<br></h5>
+								</p>									
+							</div>
+						</div>
+						<!--/.col-lg-4 -->
+						<div class="col-md-4 col-sm-6 col-md-offset-2">
+							<div class="single-profile-top wow fadeInDown" data-wow-duration="1000ms" data-wow-delay="300ms">
+								<div class="media">
+									<div class="pull-left">
+										<a href="#"><img class="media-object" src="{% static 'images/team/girl_engineer.png' %}" alt=""></a>
+									</div>
+									<div class="media-body">
+										<BR>
+										<h4><B>黃玟瑜</B></h4>
+										<h5>工程師</h5>
+										<h5>Engineer</h5>
+										<br>
+									</div>
+								</div>
+								<!--/.media -->
+								<p>
+								<h5>
+									<ul>
+										<font color="#006699">學經歷</font>
+										<li>準元智大學資訊管理所碩士生</li>
+										<li>工業技術研究院巨資中心</li>
+										<li>元智大學資訊管理系學士</li>
+									</ul>
+									<ul>
+										<font color="#006699">專長</font>
+										<li>日語會話、機器學習、網頁開發、資料庫設計</li>
+									</ul>
+								</h5>
+								</p>									
+							</div>
+						</div>
+						<!--/.col-lg-4 -->					
+					</div>
+					<!--/.row -->
+					<div class="row team-bar">
+						<div class="first-one-arrow hidden-xs">
+							<hr>
+						</div>
+						<div class="first-arrow hidden-xs">
+							<hr>
+							<i class="fa fa-angle-up"></i>
+						</div>
+						<div class="second-arrow hidden-xs">
+							<hr>
+							<i class="fa fa-angle-down"></i>
+						</div>
+						<div class="third-arrow hidden-xs">
+							<hr>
+							<i class="fa fa-angle-up"></i>
+						</div>
+						<div class="fourth-arrow hidden-xs">
+							<hr>
+							<i class="fa fa-angle-down"></i>
+						</div>
+					</div>
+					<!--skill_border--> 
+					<div class="row clearfix">
+						<div class="col-md-4 col-sm-6 col-md-offset-2">
+							<div class="single-profile-bottom wow fadeInDown" data-wow-duration="1000ms" data-wow-delay="300ms">
+								<div class="media">
+									<div class="pull-left">
+										<a href="#"><img class="media-object" src="{% static 'images/team/cto.png' %}" alt=""></a>
+									</div>
+									<div class="media-body">
+										<BR>
+										<h4><B>邱紹哲</B></h4>
+										<h5>工程師</h5>
+										<h5>Engineer</h5>
+										<br>
+									</div>
+								</div>
+								<!--/.media -->
+								<p>
+								<h5>
+									<ul>
+										<font color="#006699">學經歷</font>
+										<li>元智大學資訊管理所碩士生</li>
+									</ul>
+									<ul>
+										<font color="#006699">專長</font>
+										<li>自然語言處理、機器學習、深度學習</li>
+									</ul>
+									<ul>
+										<font color="#006699">榮譽</font>
+										<li>2017年首屆滬港台三地上銀校園金融科技創新大賽（校園賽）二等獎（第二名，各區前三名競賽）</li>
+										<li>2017年上海銀行Fintech未來競技場「滬港台金融科技創新Hackathon校園競賽」傳奇團隊第一名（89隊參賽）</li>
+										<li>2016年宜蘭不老節服務創意方案競賽第一名</li>
+									</ul>
+								</h5>
+								</p>								
+							</div>
+						</div>
+						<div class="col-md-4 col-sm-6 col-md-offset-2">
+							<div class="single-profile-bottom wow fadeInUp" data-wow-duration="1000ms" data-wow-delay="600ms">
+								<div class="media">
+									<div class="pull-left">
+										<a href="#"><img class="media-object" src="{% static 'images/team/girl_engineer.png' %}" alt=""></a>
+									</div>
+									<div class="media-body">
+										<BR>
+										<h4><B>李律萱</B></h4>
+										<h5>助理工程師</h5>
+										<h5>Assistant Engineer</h5>
+										<br>
+									</div>
+								</div>
+								<!--/.media -->
+								<p>
+								<h5>
+									<ul>
+										<font color="#006699">學經歷</font>
+										<li>準中央大學網路科技學習所碩士生</li>
+										<li>元智大學資訊傳播系學生</li>
+										<li>工業技術研究院巨資中心</li>
+									</ul>
+									<ul>
+										<font color="#006699">專長</font>
+										<li>悠遊於資訊科技與媒體傳播之間</li>
+									</ul>
+									<!--ul><font color="#006699">榮譽</font>
+										<li></li>
+										<li></li>
+										</ul-->
+									<br><br><br><br><br><br><br>
+								</h5>
+								</p>							
+							</div>
+						</div>
+					</div>
+					<!--/.row-->
+					<div class="row team-bar">
+						<div class="first-one-arrow hidden-xs">
+							<hr>
+						</div>
+						<div class="first-arrow hidden-xs">
+							<hr>
+							<i class="fa fa-angle-up"></i>
+						</div>
+						<div class="second-arrow hidden-xs">
+							<hr>
+							<i class="fa fa-angle-down"></i>
+						</div>
+						<div class="third-arrow hidden-xs">
+							<hr>
+							<i class="fa fa-angle-up"></i>
+						</div>
+						<div class="fourth-arrow hidden-xs">
+							<hr>
+							<i class="fa fa-angle-down"></i>
+						</div>
+					</div>
+				</div>
+				<!--section-->
+			</div>
+			<!--/.container-->
+		</section>
+		<!--/about-us-->
+		<section id="bottom">
+			<div class="container wow fadeInDown" data-wow-duration="1000ms" data-wow-delay="600ms">
+				<div class="row">
+					<div class="col-md-3 col-sm-6">
+						<div class="widget">
+							<h3>關於</h3>
+							<ul>
+								<li><a href="/about">背景簡介</a></li>
+								<li><a href="/team">團隊成員</a></li>
+								<li><a href="/hornor">榮譽</a></li>
+								<li><a href="/responsobility">社會公益</a></li>
+							</ul>
+						</div>
+					</div>
+					<!--/.col-md-3-->
+					<div class="col-md-3 col-sm-6">
+						<div class="widget">
+							<h3 >最新消息</h3>
+							<ul>
+								<li><a href="/report?0">最新快訊</a></li>
+								<li><a href="/news?0">新知分享</a></li>
+								<li><a href="/join-us">徵才訊息</a></li>
+							</ul>
+						</div>
+					</div>
+					<!--/.col-md-3-->
+					<div class="col-md-3 col-sm-6">
+						<div class="widget">
+							<h3>
+								<ul>
+									<li><a href="/technology">核心技術</a></li>
+									<li><a href="/product">產品服務</a></li>
+									<li><a href="/solution">解決方案</a></li>
+								</ul>
+							</h3>
+						</div>
+					</div>
+					<!--/.col-md-3-->
+					<div class="col-md-3 col-sm-6">
+						<div class="widget">
+							<h3>
+								<ul>
+									<li><a href="/partner">合作夥伴</a></li>
+									<li><a href="/join-us">加入我們</a></li>
+								</ul>
+							</h3>
+						</div>
+					</div>
+					<!--/.col-md-3-->
+				</div>
+			</div>
+		</section>
+		<!--/#bottom-->
+		<div class="top-bar">
+			<div class="container">
+				<div class="row">
+					<div class="col-lg-12">
+						<div class="social">
+							<ul class="social-share">
+								<li><a href="https://www.facebook.com/ai.clerk/" target="_blank""><i class="fab fa-facebook-f"></i></a></li>
+								<li><a href="/ai_clerk"><i class="fab fa-line"></i></a></li>
+								<!--li><a href="https://www.youtube.com/channel/UCSZP1-X1e0KQC2jWOWrlfSQ" target="_blank"><i class="fab fa-youtube"></i></a></li-->
+							</ul>
+						</div>
+					</div>
+					<div style="color:#fff;text-align: center;">
+						<h6 style="color:#fff;font-size: 15px;">Tel : (03)573-2002</h6>
+						<h6 style="color:#fff;font-size: 15px;">Email : aiclerkmail@gmail.com</h6>
+						<h6 style="color:#fff;font-size: 15px;">&copy;2018 ITRI. All rights reserved.</h6>
+					</div>
+				</div>
+			</div>
+			<!--/.container-->
+		</div>
+		<!--/.top-bar-->
+		<!-- jQuery (necessary for Bootstrap's JavaScript plugins) -->
+		<script src="{% static 'js/main.js' %}"></script>
+		<script src="{% static 'js/jquery.js' %}"></script>
+		<script src="{% static 'js/bootstrap.min.js' %}"></script>
+		<script src="{% static 'js/jquery.prettyPhoto.js' %}"></script>
+		<script src="{% static 'js/jquery.isotope.min.js' %}"></script>   
+		<script src="{% static 'js/wow.min.js' %}"></script>
+	</body>
+</html>
